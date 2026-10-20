@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  --color-primary-bg: #FFFFFF;
+  --color-secondary-bg: #F8F8F7;
+  --color-card-bg: #FFFFFF;
+  --color-accent: #E5B824;
+  --color-accent-hover: #D0A415;
+  --color-text-main: #121212;
+  --color-text-secondary: #5A5A57;
+  --color-border-main: #E5E5E2;
+}
+
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F8F7;
+  --bg-card: #FFFFFF;
+  --accent: #E5B824;
+  --text-main: #121212;
+  --text-secondary: #5A5A57;
+  --border-color: #E5E5E2;
+}
+
+html {
+  background-color: #FFFFFF;
+  color: #121212;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #121212;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar - Light Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F8F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D8D4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E5B824;
+}
+
+/* Light Mode Accent Glows */
+.gold-glow {
+  box-shadow: 0 4px 20px rgba(229, 184, 36, 0.25);
+}
+
+.gold-glow-subtle {
+  box-shadow: 0 2px 12px rgba(229, 184, 36, 0.15);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #B8860B 0%, #D4A017 50%, #C58F00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card Hover Elevation - Clean & Minimal */
+.card-hover-effect {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-3px);
+  border-color: rgba(229, 184, 36, 0.6);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.08), 0 0 10px rgba(229, 184, 36, 0.12);
+}
